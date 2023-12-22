@@ -15,7 +15,7 @@ import java.util.Collection;
 public class JavaQuestionController {
     private final QuestionService questionService;
 
-//    @Autowired
+    @Autowired
     public JavaQuestionController(QuestionService questionService) {
         this.questionService = questionService;
     }
