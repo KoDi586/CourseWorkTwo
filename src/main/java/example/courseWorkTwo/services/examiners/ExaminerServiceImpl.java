@@ -2,16 +2,17 @@ package example.courseWorkTwo.services.examiners;
 
 import example.courseWorkTwo.Question;
 import example.courseWorkTwo.services.questions.QuestionService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
 public class ExaminerServiceImpl implements ExaminerService {
-    private Random random = new Random();
+    private final Random random = new Random();
     private final QuestionService questionService;
 
-    //    @Autowired
+    @Autowired
     public ExaminerServiceImpl(QuestionService questionService) {
         this.questionService = questionService;
     }
